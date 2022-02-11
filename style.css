@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #262626;
+}
+
+main{
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+.navbar{
+    position: fixed;
+    background-color: #141414;
+    transition: width 200ms ease;
+    overflow: scroll;
+}
+
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-item{
+    width: 100%;
+}
+
+.nav-item:last-child{
+    margin-top: auto;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: #b6b6b6;
+    text-decoration: none;
+    filter:  grayscale(100%) opacity(0.7);
+    transition: 400ms;
+}
+
+.nav-link:hover{
+    filter:  grayscale(0%) opacity(1);
+    background: #212121;
+    color: #ececec;
+}
+
+.link-text{
+    display: none;
+    margin-left: 1rem;
+}
+
+.nav-link svg{
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+}
+
+.nav-link path{
+    color: #00bcd4;
+    transition: 400ms;
+}
+
+.logo{
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.5rem; 
+    letter-spacing: 0.3ch;
+    width: 100%;
+}
+
+.logo svg{
+    transform: rotate(0deg);
+    transition: transform 400ms;
+}
+
+.navbar:hover .logo svg{
+    transform: rotate(-180deg);
+}
+
+.logo .nav-link:hover{
+    filter:  grayscale(0%) opacity(1);
+    background: #141414;
+    color: #ececec;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+section .content{
+    max-width: 70%;
+}
+
+section .content h2{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-size: 3em;
+    transition: 0.5s;
+    transform-origin: left;
+}
+
+section .content h3{
+    position: relative;
+    margin: 0;
+    padding: 20px 0 0;
+    font-size: 2em;
+    transition: 0.5s;
+    transform-origin: right;
+}
+
+.wrapper{
+    box-sizing: content-box;
+    height: 40px;
+    padding: 20px 0px;
+    display: flex;
+}
+
+section .words span{
+    position: relative;
+    display: block;
+    font-size: 1.5em;
+    height: 100%;
+    animation: spin_words 6s infinite;
+    color: #00bcd4;
+}
+
+@keyframes spin_words{
+    10%{
+        transform: translateY(-112%);
+    }
+    25%{
+        transform: translateY(-100%);
+    }
+    35%{
+        transform: translateY(-212%);
+    }
+    50%{
+        transform: translateY(-200%);
+    }
+    60%{
+        transform: translateY(-312%);
+    }
+    75%{
+        transform: translateY(-300%);
+    }
+    85%{
+        transform: translateY(-412%);
+    }
+    100%{
+        transform: translateY(-400%);
+    }
+}
+
+.words{
+    height: auto;
+    overflow: hidden;
+}
+
+section .content p{
+    font-size: 1.2em;
+    transition: 1s;
+}
+
+.scroll-down {
+    height: 50px;
+    width: 30px;
+    border: 2px solid #ffffff;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+
+  .scroll-down::before,
+  .scroll-down::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border: 2px solid #00bcd4;
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+  }
+
+  .scroll-down:hover{
+    border: 2px solid #00bcd4;
+    transition: 0.3s;
+  } 
+
+  .scroll-down::before {
+    top: 30%;
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes scroll-down {
+    0% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      top: 90%;
+      opacity: 0;
+    }
+  }
+  
+
+section .content .button{
+    background: #ffffff;
+    color: #262626;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 1s;
+}
+
+.parent {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.photo{
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
+
+.rounded-circle{
+    float: left;
+    height: 100%;
+    border: 1px solid #fff;
+    border-radius: 200px;
+    margin: 50px;
+}
+
+.content-table{
+    border-collapse: collapse;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight:500;
+    color: #ffffff;
+    margin-bottom: 0;
+    font-size: 1.1em;
+
+    min-width: 300px;
+    margin: 75px 0px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr{
+    background-color: #0088a9;
+}
+
+.content-table th, .content-table td{
+    padding: 12px 15px;
+}
+
+.content-table tbody tr{
+    border-bottom: 1px solid #dddddd;
+    background-color: hsla(0, 0%, 0%, 0.4);
+    color: #ffff;
+}
+
+.content-table tbody tr:last-of-type{
+    border-bottom: 1px solid #00bcd4;
+}
+
+.gallery{
+    display: flex;
+    margin: 75px 0px 75px;
+}
+
+.gallery .certificate1,.certificate2,.certificate3{
+    padding: 10px;
+}
+
+.gallery a {
+    position: relative
+}
+  
+.gallery a span {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 0 15px;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+  
+.gallery a:hover span {
+    display: block;
+}
+
+.contact-info{
+    margin: 5rem 0 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+}
+
+.card{
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card p a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.card p a:hover{
+    color: #00bcd4;
+    transition: 600ms;
+}
+.contact-info svg{
+    width: 2rem;
+}
+
+footer{
+    height: 5rem;
+    display:flex;
+}
+
+footer p{
+    color: #ffffff;
+    text-align: center;
+    margin: auto;
+}
+
+/*small screen*/
+@media only screen and (max-width: 481px) {
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+        z-index: 1;
+      }
+    
+      .logo {
+        display: none;
+      }
+    
+      .navbar-nav {
+        flex-direction: row;
+      }
+    
+      .nav-link {
+        justify-content: center;
+      }
+    
+      main {
+        margin: 0;
+      }
+      .scroll-down {
+          display: none;
+      }
+      footer{
+        height: 10rem;
+        display:flex;
+    }
+
+    .photo{
+        height: 200px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .words{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    section .content{
+        text-align: center;
+    }
+
+    .content-table{
+        min-width: 200px;
+    }
+
+    .rounded-circle{
+        margin: 0;
+        margin-bottom: 25px;
+    }
+    
+
+    footer p{
+        padding-bottom: 5rem;
+    }
+}
+
+
+/*tablet screen*/
+@media only screen and (min-width: 481px) and (max-width:901px){
+    .navbar{
+        top: 0;
+        width: 100vw;
+        height: 5rem;
+        z-index: 1;
+    }
+    
+    .logo {
+        display: none;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+    
+    main {
+        margin: 0;
+    }
+}
+
+
+/*large screen*/
+@media only screen and (min-width: 901px) {
+    .navbar{
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+        z-index: 1;
+    }
+    
+    .navbar:hover{
+        width: 16rem;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .navbar:hover .link-text{
+        transition: opacity 400ms;
+        display: block
+    }
+    .navbar:hover .logo-text
+    {
+        left: 0px;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .contact-info{
+        flex-direction: column;
+    }
+    .card{
+        margin: 1rem 0rem;
+    }
+    
+    .card p a{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1240px){
+    .gallery{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 461px){
+    .gallery img{
+        height: 200px;
+    }
+}
